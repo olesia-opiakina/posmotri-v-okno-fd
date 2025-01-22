@@ -274,8 +274,6 @@ ol {
 
 .content__video-card {
   display: flex;
-  /* grid-template-columns: 1fr 1fr; */
-  /* justify-content: space-between; */
   align-items: start;
 }
 
