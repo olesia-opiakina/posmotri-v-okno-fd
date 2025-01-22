@@ -12,13 +12,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -53,22 +53,12 @@ ol {
   background-color: #d9d9d9;
 }
 
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
 .content {
   display: grid;
   grid-template-columns: 711px 399px;
-  gap: 32px;
   grid-template-areas: "result content__details";
   align-items: end;
+  gap: 32px;
   min-width: 1140px;
 }
 
@@ -98,14 +88,14 @@ ol {
 
 .search-form__fieldset {
   flex-grow: 1;
-  border: none;
   margin-bottom: 3px;
+  border: none;
 }
 
 .search-form__fieldset-title {
+  padding-bottom: 5px;
   font-weight: 400;
   font-size: 18px;
-  padding-bottom: 5px;
 }
 
 .search-form__label {
@@ -122,17 +112,17 @@ ol {
 }
 
 .search-form__textfield {
+  width: 225px;
+  border-top: 1px solid #fff;
+  border-right: none;
+  border-bottom: 1px solid #fff;
+  border-left: none;
+  color: rgba(255, 255, 255, 0.7);
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff;
-  border-right: none;
-  border-left: none;
   appearance: none;
-  width: 225px;
 }
 
 .search-form__textfield:focus {
@@ -153,16 +143,16 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #fff;
   width: 19px;
   height: 19px;
+  border: 1px solid #fff;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
-  background-color: #fff;
   width: 15px;
   height: 15px;
+  background-color: #fff;
 }
 
 .search-form__checkbox:focus {
@@ -171,12 +161,12 @@ ol {
 
 .button {
   border: 1px solid #fff;
-  background-color: transparent;
   color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
-  font-family: "Fira Sans Condensed", sans-serif;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -206,19 +196,19 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
   grid-area: content__details;
+  gap: 26px;
   width: 100%;
   height: 100%;
 }
 
 .title {
+  color: #fff;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
-  color: #fff;
 }
 
 .content__accent {
@@ -235,8 +225,8 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding-bottom: 30px;
   width: 100%;
+  padding-bottom: 30px;
 }
 
 .content__list-item {
@@ -245,8 +235,8 @@ ol {
 
 .content__card-link {
   display: block;
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -278,27 +268,31 @@ ol {
 }
 
 .content__video-card-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   width: 196px;
+  padding-bottom: 6px;
+  overflow: hidden;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
-  padding-bottom: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
 }
 
 .content__video-card-description {
-  overflow: hidden;
   display: -webkit-box;
+  padding-bottom: 5px;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 16.2px;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   line-clamp: 4;
-  font-size: 18px;
-  line-height: 16.2px;
-  padding-bottom: 5px;
 }
 
 .content__video-card-thumbnail {
@@ -308,11 +302,17 @@ ol {
   object-position: center;
 }
 
-.content__video-card-description-container {
-  flex-grow: 1;
+.more-button {
+  width: 390px;
+  height: 34px;
 }
 
-.more-button {
-  height: 34px;
-  width: 100%;
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
