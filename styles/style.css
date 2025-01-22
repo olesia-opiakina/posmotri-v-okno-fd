@@ -65,12 +65,11 @@ ol {
 
 .content {
   display: grid;
-  grid-template-columns: 711px 390px;
-  gap: 30px;
+  grid-template-columns: 711px 399px;
+  gap: 32px;
   grid-template-areas: "result content__details";
   align-items: end;
-  width: 1140px;
-  position: relative;
+  min-width: 1140px;
 }
 
 .result {
@@ -78,6 +77,7 @@ ol {
 }
 
 .result__video-container {
+  position: relative;
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
@@ -99,6 +99,7 @@ ol {
 .search-form__fieldset {
   flex-grow: 1;
   border: none;
+  margin-bottom: 3px;
 }
 
 .search-form__fieldset-title {
@@ -176,10 +177,12 @@ ol {
   font-size: 18px;
   text-align: center;
   font-family: "Fira Sans Condensed", sans-serif;
+  cursor: pointer;
 }
 
 .button:hover {
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .button:active {
@@ -210,6 +213,7 @@ ol {
 }
 
 .title {
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -232,44 +236,71 @@ ol {
   flex-direction: column;
   gap: 30px;
   padding-bottom: 30px;
+  width: 100%;
+}
+
+.content__list-item {
+  padding: 0 3px;
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
 }
 
 .content__video-card {
-  /* position: relative; */
   display: flex;
-  flex-direction: row;
+  /* grid-template-columns: 1fr 1fr; */
+  /* justify-content: space-between; */
   align-items: start;
-  justify-content: space-between;
-  /* gap: 30px; */
 }
 
 .content__video-card-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 196px;
+  width: 196px;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
+  padding-bottom: 6px;
 }
 
 .content__video-card-description {
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  line-clamp: 6;
-  -webkit-box-orient: vertical;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   font-size: 18px;
   line-height: 16.2px;
-  max-width: 196px;
-  max-height: 103px;
+  padding-bottom: 5px;
 }
 
 .content__video-card-thumbnail {
