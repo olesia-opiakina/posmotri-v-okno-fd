@@ -114,11 +114,11 @@ ol {
 
 .search-form__textfield {
   width: 225px;
-  border-top: 1px solid #fff;
+  border-top: 1px solid currentColor;
   border-right: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid currentColor;
   border-left: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   font-family: inherit;
   font-weight: 400;
   font-size: inherit;
@@ -146,7 +146,7 @@ ol {
   align-items: center;
   width: 19px;
   height: 19px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -161,7 +161,7 @@ ol {
 }
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   color: #fff;
   font-family: inherit;
   font-weight: 700;
@@ -185,7 +185,7 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 1px;
 }
 
@@ -225,9 +225,9 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 30px;
   width: 100%;
-  padding-bottom: 30px;
 }
 
 .content__list-item {
@@ -260,7 +260,7 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
 }
 
 .content__video-card {
@@ -306,6 +306,7 @@ ol {
 .more-button {
   width: 390px;
   height: 34px;
+  margin-top: 30px;
 }
 
 .visually-hidden {
